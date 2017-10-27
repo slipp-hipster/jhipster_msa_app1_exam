@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "login",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027084204",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "owner",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no",
+    "microserviceName": "app1",
+    "searchEngine": false
+}
