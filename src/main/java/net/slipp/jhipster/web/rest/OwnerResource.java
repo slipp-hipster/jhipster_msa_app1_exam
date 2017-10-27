@@ -1,6 +1,7 @@
 package net.slipp.jhipster.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import net.slipp.jhipster.client.UserClient;
 import net.slipp.jhipster.domain.Owner;
 
 import net.slipp.jhipster.repository.OwnerRepository;
@@ -12,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -34,6 +36,9 @@ public class OwnerResource {
     public OwnerResource(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
     }
+
+    @Inject
+    private UserClient userClient;
 
     /**
      * POST  /owners : Create a new owner.
@@ -86,7 +91,7 @@ public class OwnerResource {
     @Timed
     public List<Owner> getAllOwners() {
         log.debug("REST request to get all Owners");
-        return ownerRepository.findAll();
+        return userClient.getAllUsers();
         }
 
     /**
