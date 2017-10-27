@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "owner",
+            "otherEntityName": "owner",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "desc",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171027084318",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "contents",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no",
+    "microserviceName": "app1",
+    "searchEngine": false
+}
